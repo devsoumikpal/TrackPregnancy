@@ -9,7 +9,7 @@ object VitalsWorkManager {
 
     fun scheduleVitalsReminder(context: Context) {
         val workRequest = PeriodicWorkRequestBuilder<VitalsReminderWorker>(
-            1, TimeUnit.MINUTES// Executes every 5 hours
+            5, TimeUnit.HOURS// Executes every 5 hours
         ).setConstraints(
             Constraints.Builder()
                 .setRequiresBatteryNotLow(true) // Only run when battery is not low
