@@ -1,10 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/background_color"
     tools:context=".CallStatus">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Status Indicator -->
+    <ImageView
+        android:id="@+id/statusIcon"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:src="@drawable/baseline_call_24"
+        app:tint="@color/colorPrimary" />
+
+    <!-- Call Status Text -->
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Waiting for Call..."
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/textColor"
+        android:gravity="center" />
+
+
+    <!-- Animated Background (for Ringing effect) -->
+    <View
+        android:id="@+id/alertEffect"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/colorAccent"
+        android:layout_marginTop="15dp"
+        android:visibility="gone"
+        android:animateLayoutChanges="true"/>
+</LinearLayout>

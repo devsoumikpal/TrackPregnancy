@@ -1,0 +1,4 @@
+<pattern xmlns:android="http://schemas.android.com/apk/res/android"
+    android:repeat="0">
+    <item android:duration="1000" android:vibrationAmplitude="255"/>
+</pattern>
